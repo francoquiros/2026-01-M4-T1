@@ -3,7 +3,7 @@
 from pyspark.sql import SparkSession
 
 import sys
-from functions import load_cyclists, load_routes, load_activities
+from functions import join_data, load_cyclists, load_routes, load_activities
 
 
 def validate_args():
@@ -39,19 +39,14 @@ def main():
     rutas_df = load_routes(spark, rutas_path)
     actividad_df = load_activities(spark, actividad_path)
 
-    print("ciclistas")
-    ciclistas_df.show(10)
-    print("rutas")
-    rutas_df.show(10)
-    print("actividad")
-    actividad_df.show(10)
-
     # -----------------------------------------------------
     # Data joins
     # -----------------------------------------------------
     # TODO:
     #
-    # joined_df = ...
+    joined_df = join_data(ciclistas_df, rutas_df, actividad_df)
+    print("joined")
+    joined_df.show(10)
     # -----------------------------------------------------
     # Intermediate aggregations
     # -----------------------------------------------------

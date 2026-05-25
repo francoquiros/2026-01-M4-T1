@@ -42,7 +42,7 @@ def load_routes(spark: SparkSession, file_path: str) -> DataFrame:
         ]
     )
     # Read CSV
-    df = spark.read.csv(file_path, header=False)
+    df = spark.read.csv(file_path, header=False, schema=schema)
     # Return dataframe
     return df
 
@@ -77,9 +77,19 @@ def join_data(
     # TODO:
     #
     # Join cyclists with activities
+    result = cyclists_df.join(
+        activities_df,
+        on="cedula",
+        how="left",
+    )
     # Join result with routes
+    result = result.join(
+        routes_df,
+        on="codigo_ruta",
+        how="left",
+    )
     # Return final dataframe
-    pass
+    return result
 
 
 # =========================================================
