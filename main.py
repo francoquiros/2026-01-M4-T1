@@ -51,10 +51,10 @@ aggregated_df = aggregate_kms_per_cyclist_and_date(joined_df)
 print("DATAFRAME INTERMEDIO DE DATOS AGREGADOS")
 aggregated_df.show()
 
-# Función para extraer el top N = 3 de ciclistas
-top_3_per_province = top_n_cyclists(aggregated_df, 3)
+# Función para extraer el top N = 5 de ciclistas
+top_3_per_province = top_n_cyclists(aggregated_df, 5)
 # Se muestran las primeras filas del resultado
-print("DATAFRAME CON RESULTADOS FINALES (TOP N = 3 POR PROVINCIA)")
+print("DATAFRAME CON RESULTADOS FINALES (TOP N = 5 POR PROVINCIA)")
 top_3_per_province.show()
 
 # Se detiene la sesión de Spark
