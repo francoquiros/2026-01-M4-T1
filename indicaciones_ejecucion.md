@@ -3,11 +3,16 @@
 Instituto Tecnológico de Costa Rica Bimestre 3 2026
 Escuela de Computación Módulo IV: Big Data
 Programa Ciencia de Datos Asignación: Tarea 1
-Profesor: Estudiantes Identificación
-Nereo Campos Araya Fernanda Porras Mora 116940902
-Franco Quirós Montoya 304850621
-Héctor Saballos Zamora 207580427
-Indicaciones para la ejecución de la Tarea 1
+
+Profesor: Nereo Campos Araya 
+
+Estudiantes:
+- Fernanda Porras Mora 116940902
+- Franco Quirós Montoya 304850621
+- Héctor Saballos Zamora 207580427
+
+
+### Indicaciones para la ejecución de la Tarea 1
 Archivos necesarios para ejecutar el código
 • actividad.csv
 • build_image.sh
@@ -26,7 +31,7 @@ se guardó la carpeta descargada.
 3. Se debe renombrar dicha carpeta como “tarea_1” en el caso de que no sea este ya.
 4. Se debe construir la imagen. Utilizar el comando:
 ```bash
-docker build –-tag bigdata .
+docker build --tag bigdata .
 ```
 (Nótese el punto al final del comando).
 En caso de que no funcione, intentar con
